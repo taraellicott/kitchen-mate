@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.mate {
+  padding-bottom: 1rem;
+}
+
+.logged {
+  margin: 1rem;
+}
