@@ -20,7 +20,7 @@ class Recipe < ApplicationRecord
     recipe_url = "http://www.yummly.co/recipe/#{recipe_id}"
     recipe_category =  results_hash["matches"][0]["attributes"]["course"][0]
     recipe = Recipe.new(title:recipe_title, category: recipe_category, directions: recipe_url)
-  
+
   end
 
 
