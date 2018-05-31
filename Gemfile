@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
 
 ruby '2.3.3'
 
@@ -26,9 +26,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
 gem 'rest-client'
 
+gem 'bootstrap', '~> 4.1.1'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
