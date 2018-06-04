@@ -15,10 +15,18 @@ class Recipe < ApplicationRecord
     end
     response = RestClient.get(api_url)
     results_hash = JSON.parse(response)
+    if !results_hash["matches"][0]
+      return nil
+
+    end
     recipe_title = results_hash["matches"][0]["recipeName"]
     recipe_id = results_hash["matches"][0]["id"]
     recipe_url = "http://www.yummly.co/recipe/#{recipe_id}"
-    recipe_category =  results_hash["matches"][0]["attributes"]["course"][0]
+    if !results_hash["matches"][0]["attributes"]["course"]
+      recipe_category = nil
+    else
+      recipe_category =  results_hash["matches"][0]["attributes"]["course"][0]
+    end
     recipe = Recipe.new(title:recipe_title, category: recipe_category, directions: recipe_url)
 
   end

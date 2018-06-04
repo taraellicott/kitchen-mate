@@ -20,3 +20,28 @@
 .logged {
   margin: 1rem;
 }
+
+.ingredients {
+   padding-left: 19rem;
+   padding-top: 1.05rem;
+  /* display: flex;
+  align-items: center; */
+
+}
+
+.centered_text {
+  text-align: center;
+}
+
+.welcome {
+  color: #B442DE;
+}
+
+body{
+  background-image:
+  url("pic.jpeg");
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  /* background-position: center; */
+  background-position: 600px 420px;
+}
