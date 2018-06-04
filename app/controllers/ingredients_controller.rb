@@ -18,10 +18,14 @@ class IngredientsController < ApplicationController
     # if @ingredient1.save && @ingredient2.save && @ingredient3.save
 
      @recipe = Recipe.get_recipes(params["ingredients"])
-      @recipe.save
+     if @recipe == nil
+       render 'error'
+     else
+      if @recipe.save
        redirect_to recipe_path(@recipe)
      else
        render 'new'
+     end
      end
 
   end

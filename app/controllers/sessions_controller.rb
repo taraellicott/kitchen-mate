@@ -9,13 +9,14 @@ end
 
 # ligin post action
   def create
-    user = User.find_by(username:params["username"])
+    user = User.find_by(username: params["username"])
+
     if user.authenticate(params["password"])
       # do something
       #   log the user in
       session[:user_id] = user.id
       #   send them somewhere
-      redirect_to recipes_path
+      redirect_to new_ingredient_path
     else
       # render the form again with an error message
       render '/sessions/new'

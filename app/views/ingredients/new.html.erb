@@ -1,15 +1,20 @@
-<h1>Please Enter the Ingredients</h1>
+<marquee><h3 class="welcome">Welcome to Kitchen Mate!</h3></marquee>
 
+
+<h1 class="centered_text">Please Enter the Ingredients</h1>
+
+
+<div class="ingredients">
 <%=form_tag ingredients_path do  %>
-  <%=label_tag "ingredients[]", "Ingredient"%>
+  <%=label_tag "ingredients[]", "     "%>
   <%=text_field_tag "ingredients[]" %> <br>
-  <%=label_tag "ingredients[]", "Ingredient" %>
+  <%=label_tag "ingredients[]", "     " %>
   <%=text_field_tag "ingredients[]" %><br>
-  <%=label_tag "ingredients[]", "Ingredient" %>
+  <%=label_tag "ingredients[]", "     " %>
   <%=text_field_tag "ingredients[]" %> <br>
   <br>
   <%=submit_tag "Submit"%>
-
+</div>
 
 
 
