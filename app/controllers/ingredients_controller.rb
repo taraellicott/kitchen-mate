@@ -27,5 +27,4 @@ class IngredientsController < ApplicationController
       end
     end
   end
-
 end
