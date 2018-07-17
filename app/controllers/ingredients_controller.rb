@@ -16,24 +16,16 @@ class IngredientsController < ApplicationController
     # @ingredient2 = Ingredient.find_or_create_by(name: params["ingredients"])
     # @ingredient3 = Ingredient.find_or_create_by(name: params["ingredients"])
     # if @ingredient1.save && @ingredient2.save && @ingredient3.save
-
-     @recipe = Recipe.get_recipes(params["ingredients"])
-     if @recipe == nil
-       render 'error'
-     else
+    @recipe = Recipe.get_recipes(params["ingredients"])
+    if @recipe == nil
+      render 'error'
+    else
       if @recipe.save
-       redirect_to recipe_path(@recipe)
-     else
-       render 'new'
-     end
-     end
-
+        redirect_to recipe_path(@recipe)
+      else
+        render 'new'
+      end
+    end
   end
-
-
-
-
-
-
 
 end
