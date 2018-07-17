@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :recipe_ingredients
   resources :recipes
   resources :saved_recipes
-
+  get "/", to: 'users#new'
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create', as: 'users'
 
